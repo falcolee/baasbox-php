@@ -30,11 +30,11 @@ class baasbox{
 	 * @return object
 	 */
 	public function load_baasbox() {
-        $baasbox = Hook\Client::getInstance();
+        $baasbox = Baasbox\Client::getInstance();
         if(isset($baasbox)) {
             return $baasbox;
         }else{
-            return Hook\Client::configure(array(
+            return Baasbox\Client::configure(array(
 			  'app_id' => 1234567890,
 			  'endpoint' => 'http://www.test.com:9000/',
 			  'authorization'=>'test:123456'	

@@ -17,4 +17,6 @@ $box->collection('scores')->create(array(
   'name' => 'Endel',
   'score' => 7
 ));
+
+$list = $box->collection('scores')->get();
 ```
