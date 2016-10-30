@@ -123,8 +123,14 @@ class Client {
 			$body = json_encode($data);
 		}
 
+		$getHeaders = $this->getHeaders($headers);
+
+		if ($method === "DELETE") {
+		    $getHeaders['Content-Type'] = "application/x-www-form-urlencoded";
+		}
+		
 		return $client->{$method}($this->credentials['endpoint'] . $segments, array(
-			'headers' => $this->getHeaders($headers),
+			'headers' => $getHeaders,
 			'body' => $body,
 			'exceptions' => false
 		))->json();
