@@ -192,9 +192,9 @@ class Collection {
 		$query = '';
         
 		// apply prePage / skip
-		if ($this->recordsPerPage !== null) { $query .='&recordsPerPage ='.$this->recordsPerPage; }
-		if ($this->skip !== null) { $query .='&skip ='.$this->skip; }
-        if ($this->page !== null) { $query .='&page ='.$this->page; }
+		if ($this->recordsPerPage !== null) { $query .='&recordsPerPage='.$this->recordsPerPage; }
+		if ($this->skip !== null) { $query .='&skip='.$this->skip; }
+        if ($this->page !== null) { $query .='&page='.$this->page; }
 		// apply wheres
 		if (count($this->wheres) > 0) {
             $params = '';
