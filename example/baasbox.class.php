@@ -67,7 +67,7 @@ class baasbox{
     }
 
     public function orderBy($field, $direction = null){
-        return $this->box->collection($this->table)->orderBy($field, $direction = null);
+        return $this->box->collection($this->table)->orderBy($field, $direction);
     }
 
     public function recordsPerPage($int){
